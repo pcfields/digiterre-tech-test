@@ -1,0 +1,22 @@
+<div class="view-page">
+  <h1>Product</h1>
+
+  <section class="product product--extra">
+    <header>
+      <div class="product-name">{{ product.details.Name }}</div>
+      <div class="product-price">{{ product.details.PriceDecimal | currency: '£' }}</div>
+    </header>
+    <div class="product-details">
+      <img class="product-image" ng-src="{{ product.details.ImageUrl }}" alt="" />
+      <div class="product-description">{{ product.details.Description }}</div>
+    </div>
+
+    <div class="product-reviews">
+    <div ng-repeat="review in product.details.Reviews">
+      <div class="product-review-rating">Rating: {{ review.Rating }}</div>
+      <div class="product-review-reviewer">{{ review.Reviewer }}</div>
+      <div class="product-review-description">{{ review.Description }}</div>
+    </div>
+  </div>
+  </section>
+</div>

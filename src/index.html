@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <style>
+      /* This helps the ng-show/ng-hide animations start at the right place. */
+      /* Since Angular has this but needs to load, this gives us the class early. */
+      .ng-hide { display: none!important; }
+    </style>
+    <title>Digi Store</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <base href="/">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/digi.css">
+  </head>
+  <body>
+    <header class="page-header">
+     <h1>Digiterre</h1>
+    </header>
+
+    <div ng-view></div>
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/store/store.module.js"></script>
+    <script src="app/product/product.module.js"></script>
+
+    <script src="app/core/product/product.service.js"></script>
+
+    <script src="app/store/store.controller.js"></script>
+    <script src="app/product/product.controller.js"></script>
+  </body>
+</html>

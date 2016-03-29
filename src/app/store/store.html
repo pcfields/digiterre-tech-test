@@ -1,0 +1,23 @@
+<div class="view-page">
+    <h1> Digiterre Storefront </h1>
+
+    <div
+        class="product-list">
+
+      <a
+          class="product"
+          ng-href="#/product/{{ product.Id }}"
+          ng-repeat="product in store.products">
+
+            <div class="product-image">
+              <img class="img-responsive" ng-src="{{ product.ImageUrl }}" alt="">
+            </div>
+
+            <div class="product-details">
+              <div class="product-details-name">{{ product.Name }}</div>
+              <div class="product-details-price"> {{ product.PriceDecimal | currency: "£" }} </div>
+            </div>
+      </a>
+    </div>
+</div>
+
